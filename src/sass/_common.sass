@@ -1,0 +1,67 @@
+body
+   min-width: 320px
+   -webkit-font-smoothing: antialiased
+   -moz-osx-font-smoothing: grayscale
+   +f('ms300', 18, 23)
+   
+   color: $color-1
+   &.is-locked
+      position: fixed
+      top: 0
+      left: 0
+      right: 0
+      height: 0
+      overflow: hidden
+
+ul
+   li
+      &::before
+         margin-right: 3px
+         content: "•"
+         color: currentColor
+
+.container
+   max-width: 1260px
+   margin: 0 auto
+   padding: 0 15px
+   +clr
+   
+.row
+   display: flex
+   flex-wrap: wrap
+   margin: 0 -15px
+   +md
+      justify-content: center
+      margin: 0 -10px
+   +sm
+      flex-direction: column
+
+.main
+   overflow: hidden
+
+.title
+   +f('ms900')
+   color: $color-2
+   &_default
+      font-size: 30px
+      line-height: 36px
+
+.btn
+   display: inline-block
+   padding: 17px 64px 15px
+   outline: 0
+   text-align: center
+   text-transform: uppercase
+   +trs
+   +f('ms700', 14, 17)
+   border-radius: 5px
+   &_lime
+      color: $black
+      background-color: $color-4
+      &:hover
+         background-color: #5bc600
+   &_orange
+      color: $white
+      background-color: $color-3
+      &:hover
+         background-color: #ff4c01

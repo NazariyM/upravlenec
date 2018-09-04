@@ -1,0 +1,51 @@
+//fonts
+=font($alias, $name)
+	@font-face
+		font-family: $alias
+		src: url("../fonts/" + $name + ".eot")
+		src: url("../fonts/" + $name + ".eot?#iefix") format("embedded-opentype"), url("../fonts/" + $name + ".woff") format("woff"), url("../fonts/" + $name + ".woff2") format("woff2"), url("../fonts/" + $name + ".ttf") format("truetype")
+		font-weight: normal
+		font-style: normal
+
++font('MuseoSansCyrl-100', 'MuseoSansCyrl-100')
++font('MuseoSansCyrl-100Italic', 'MuseoSansCyrl-100Italic')
++font('MuseoSansCyrl-300', 'MuseoSansCyrl-300')
++font('MuseoSansCyrl-300Italic', 'MuseoSansCyrl-300Italic')
++font('MuseoSansCyrl-500', 'MuseoSansCyrl-500')
++font('MuseoSansCyrl-500Italic', 'MuseoSansCyrl-500Italic')
++font('MuseoSansCyrl-700', 'MuseoSansCyrl-700')
++font('MuseoSansCyrl-700Italic', 'MuseoSansCyrl-700Italic')
++font('MuseoSansCyrl-900', 'MuseoSansCyrl-900')
++font('MuseoSansCyrl-900Italic', 'MuseoSansCyrl-900Italic')
+
+=f($name, $font-size: null, $line-height: null, $letter-spacing: null)
+	$font-family: null
+	@if $name == "ms100"
+		$font-family: "MuseoSansCyrl-100"
+	@if $name == "ms100i"
+		$font-family: "MuseoSansCyrl-100Italic"
+	@if $name == "ms300"
+		$font-family: "MuseoSansCyrl-300"
+	@if $name == "ms300i"
+		$font-family: "MuseoSansCyrl-300Italic"
+	@if $name == "ms500"
+		$font-family: "MuseoSansCyrl-500"
+	@if $name == "ms500i"
+		$font-family: "MuseoSansCyrl-500Italic"
+	@if $name == "ms700"
+		$font-family: "MuseoSansCyrl-700"
+	@if $name == "ms700i"
+		$font-family: "MuseoSansCyrl-700Italic"
+	@if $name == "ms900"
+		$font-family: "MuseoSansCyrl-900"
+	@if $name == "ms900i"
+		$font-family: "MuseoSansCyrl-900Italic"
+	font-family: $font-family, Arial, sans-serif
+	@if $font-family != null
+		font-weight: normal
+	@if $font-size != null
+		font-size: $font-size * 1px
+	@if $line-height != null
+		line-height: $line-height * 1px
+	@if $letter-spacing != null
+		letter-spacing: ($letter-spacing / 1000) * 1em

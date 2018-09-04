@@ -1,0 +1,352 @@
+.screen
+   position: relative
+   display: flex
+   padding: 25px 0 20px
+   min-height: 476px
+   +cover
+   color: #fff
+   text-align: center
+   &::after
+      +coverdiv
+      background: rgba(#183364, .68)
+      pointer-events: none
+      content: ''
+   &__container
+      position: relative
+      z-index: 1
+      display: flex
+      flex-direction: column
+      justify-content: center
+   &__event
+      margin-bottom: 30px
+      &-info
+         line-height: 26px
+      &-date
+         +f('ms900', 30)
+         color: $color-3
+      &-time
+         font-size: 20px
+   &__main-text
+      margin-bottom: 30px
+   &__sub-title
+      margin-bottom: 5px
+      font-size: 28px
+      line-height: 26px
+      color: $color-3
+   &__title
+      margin-bottom: 5px
+      font-size: 72px
+      line-height: 72px
+      color: #fff
+   &__descr
+      font-size: 20px
+   &__actions
+      &-btn
+         margin-bottom: 5px
+      &-status
+         font-size: 14px
+         line-height: 17px
+         color: $color-4
+
+.benefits
+   padding: 50px 0
+   text-align: center
+   &__row
+      justify-content: space-between
+   &__item
+      padding: 0 15px
+      line-height: 26px
+      &_md
+         flex: 0 1 410px
+      &_sm
+         flex: 0 1 460px
+      &-icon
+         margin: 0 auto 30px
+      
+      &-title
+         margin-bottom: 20px
+         font-size: 24px
+         color: $color-3
+      &-descr
+         font-size: 18px
+         &:not(:last-child)
+            margin-bottom: 20px
+         strong
+            +f('ms900')
+            color: $black
+   &__actions
+      margin-top: 40px
+
+.program
+   &__inner
+      padding: 0 30px 40px
+      background: #c3d9ee
+   &__title
+      padding: 10px 0 11px
+      text-align: center
+      font-size: 30px
+      line-height: 40px
+      color: #000
+   &__item
+      display: flex
+      align-items: flex-start
+      justify-content: space-between
+      padding: 15px 20px
+      margin: 0 -15px
+      background: #fff
+      color: #000
+      &:not(:last-child)
+         margin-bottom: 30px
+      &-head
+         position: relative
+         flex: 0 1 480px
+         padding: 0 15px
+      &-count
+         position: absolute
+         top: 0
+         left: 0
+         width: 50px
+         height: 50px
+         border-radius: 50%
+         background: #22628b
+         color: #fff
+         text-align: center
+         +f('ms900', 20, 50)
+      &-symbol
+         color: $color-3
+         background: transparent
+      &-title
+         margin-bottom: 20px
+         font-size: 20px
+         line-height: 25px
+         color: #000
+         &_orange
+            color: $color-3
+      &-list
+      &-descr
+         flex: 0 1 590px
+         align-self: flex-end
+         padding: 0 15px
+         +f('ms100i', 16, 23)
+   
+   &__actions
+      padding: 30px 0
+      text-align: center
+      &-btn
+         padding: 17px 58px 15px
+   
+   &__examples
+      display: flex
+      justify-content: space-between
+      padding: 50px 0
+      &-item
+         flex: 0 1 370px
+         padding: 0 15px
+         text-align: center
+      &-title
+         min-height: 58px
+         margin-bottom: 15px
+         font-size: 26px
+         line-height: 29px
+         color: #22628b
+      &-img-wrap
+         height: 208px
+      &-link
+         +f('ms100', 14, 21)
+         border-bottom: 1px solid rgba(#343c53, .5)
+         color: #343c53
+         +trs
+         &:hover
+            border-bottom-color: transparent
+   &__included
+      padding: 50px 0
+      color: #fff
+      +cover
+      &-container
+         max-width: 800px
+      &-title
+         font-size: 30px
+         line-height: 37px
+         color: $color-3
+      &-sub-title
+         font-size: 20px
+         line-height: 27px
+         color: $color-3
+      &-list
+         line-height: 27px
+
+.authors
+   padding: 50px 0
+   &__title
+      margin-bottom: 50px
+   &__person
+      display: flex
+      align-items: flex-start
+      &:not(:last-child)
+         margin-bottom: 30px
+      &-photo-wrap
+         flex: 0 1 percentage(326 / 1230)
+         +ratio(326, 326)
+         +cover-img
+         img
+            +coverdiv
+            width: 100%
+      &-text
+         padding: 30px 0 0 30px
+         flex: 1
+      &-name
+         margin-bottom: 15px
+         font-size: 24px
+         line-height: 36px
+      &-descr
+         &:not(:last-child)
+            margin-bottom: 15px
+
+.prices
+   padding: 40px 0
+   +cover
+   &__title
+      color: #fff
+      font-size: 30px
+      line-height: 36px
+   &__row
+      justify-content: space-between
+   &__card
+      padding: 20px 15px
+      background: #fff
+      color: #000
+      &_md
+         flex: 0 1 405px
+      &_sm
+         flex: 0 1 360px
+      &-header
+         position: relative
+         margin-bottom: 30px
+         padding-bottom: 20px
+         &::after
+            position: absolute
+            bottom: 0
+            left: 0
+            height: 3px
+            width: 90px
+            background: $color-3
+            content: ''
+      &-title
+         margin-bottom: 10px
+         font-size: 30px
+         line-height: 36px
+         color: $color-3
+      &-price
+         font-size: 26px
+         span
+            +f('ms900', 30, 30)
+      
+      &-list
+         font-size: 15px
+         line-height: 21px
+         &_orange
+            color: $color-3
+      
+      &-btn
+         min-width: 190px
+         padding: 17px 20px 15px
+      &-actions
+         margin-top: 30px
+         text-align: center
+         &-text
+            margin-top: 10px
+            font-size: 14px
+            line-height: 16px
+   &__guarantee
+      margin: 40px 0 0 40px
+      font-size: 16px
+      color: #fff
+      &-title
+         margin-bottom: 10px
+         font-size: 30px
+         line-height: 36px
+         color: $color-3
+
+         
+.testimonials
+   padding: 50px 0
+   &__title
+      margin-bottom: 40px
+   &__item
+      position: relative
+      flex: 0 1 50%
+      padding: 0 15px
+      font-size: 16px
+      line-height: 21px
+      &:nth-child(2) ~ &
+         padding: 30px 15px 0
+      &-inner
+         padding-left: 20px
+      &::before
+         position: absolute
+         top: 0
+         left: 0
+         height: 100%
+         width: 3px
+         background: #343c53
+         content: ''
+
+      &-text
+         margin-bottom: 20px
+         color: #343c53
+         +f('ms300i')
+
+      &-person
+         color: #000
+         &-name
+            +f('ms900', 17, 23)
+         &-pos
+            
+.faq
+   padding: 50px 0
+   +cover
+   &__title
+      margin-bottom: 40px
+   &__item
+      &:not(:last-child)
+         margin-bottom: 30px
+   &__question
+      position: relative
+      padding-bottom: 2px
+      display: inline-block
+      vertical-align: top
+      font-size: 20px
+      line-height: 30px
+      &::after
+         content: ''
+         position: absolute
+         bottom: 0
+         left: 0
+         width: 100%
+         height: 1px
+         transition: .3s ease
+         background-image: linear-gradient(90deg, currentColor, currentColor 75%, transparent 75%, transparent 100%)
+         background-size: 20px 1px
+   &__answer
+      font-size: 16px
+
+.clients
+   padding: 50px 0
+   +cover
+   &__title
+      margin-bottom: 30px
+      color: #fff
+      text-align: center
+   &__row
+      justify-content: space-between
+      &:not(:last-child)
+         margin-bottom: 30px
+   &__item
+      flex: 0 0 auto
+      padding: 0 15px
+      text-align: center
+      a
+         display: inline-block
+         +trs
+         &:hover
+            opacity: .75

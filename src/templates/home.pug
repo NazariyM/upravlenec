@@ -1,0 +1,310 @@
+extends layouts/_layout
+
+block variables
+	-title = 'Главная'
+
+block content
+
+	+b.main
+		//begin screen
+		+b.SECTION.screen(style='background-image: url(img/bg/screen_bg.jpg)')
+			+e.container.container
+				+e.event
+					+e.event-info
+						+e.H3.event-date 13 сентября – 06 октября 2018
+						+e.P.event-time Каждую субботу с 11:00 до 13:30
+				+e.main-text
+					+e.H6.sub-title Практикум для руководителей и собственников бизнеса
+					+e.H1.title.title Управленец на 100%
+					+e.P.descr Начни «руками» подчиненных добиваться выдающихся результатов и продавать их ДОРОГО!
+
+				+e.actions
+					+e.A.actions-btn.btn._lime(href='#!') Зарегистрироваться
+					+e.P.actions-status Осталось 7 мест
+		//end screen
+
+		//begin benefits
+		+b.SECTION.benefits
+			+e.container.container
+				+e.row.row
+					+e.item._md
+						+e.item-icon.icon-manager
+						+e.H3.item-title.title Ты наемный менеджер?
+						+e.P.item-descr Твое главное умение — делать так, чтобы подчиненные достигали нужных результатов, и демонстрировать это начальству. От этого зависит твоя стоимость и востребованность.
+						+e.P.item-descr
+							strong Вместе с тобой за 30 дней повысим результативность твоих подчиненных и твою СТОИМОСТЬ на рынке труда
+
+					+e.item._sm
+						+e.item-icon.icon-owner
+						+e.H3.item-title.title Ты собственник?
+						+e.P.item-descr Твоя прибыль (а часто и существование компании) зависит от твоих сотрудников.
+						+e.P.item-descr
+							strong Вместе с тобой за 30 дней повысим их результативность вдвое
+				+e.actions
+					+e.A.actions-btn.btn._orange(href='#!') Зарегистрироваться сейчас
+		//end benefits
+			
+		//begin program
+		+b.SECTION.program
+			+e.container.container
+				+e.inner
+					+e.H2.title.title Программа курса «Управленец на 100%»
+					+e.item
+						+e.item-head
+							+e.SPAN.item-count 1
+							+e.item-title.title Настоящие цели и KPI
+							+e.UL.item-list
+								li Внутренняя цель руководителя
+								li KPI внутри компании
+								li Правильные люди или правильные процессы
+						+e.P.item-descr Определим для каждого участника курса, его настоящую внутреннюю цель и главные показатели эффективности. Сделаем так, чтобы их можно было легко и прозрачно мониторить
+
+					+e.item
+						+e.item-head
+							+e.SPAN.item-count 2
+							+e.item-title.title Настройка сотрудников на результат
+							+e.UL.item-list
+								li Ключевые сотрудники
+								li Постановка и контроль задач
+						+e.P.item-descr Определим ключевых сотрудников, на управлении которыми нужно сфокусироваться (непосредственное управление). Определим для них целевые показатели эффективности и поможем сформировать планы. Внедрим методику простого и эффективного контроля выполнения задач
+
+					+e.item
+						+e.item-head
+							+e.SPAN.item-count 3
+							+e.item-title.title Устранение барьеров
+							+e.UL.item-list
+								li Делегирование задач и полномочий
+								li Развитие ключевых сотрудников
+						+e.P.item-descr Создадим действенную систему перераспределения 80% задач, которые сейчас выполняем самостоятельно. Избавимся от ненужной «операционки», займемся вопросами стратегического развития (в том числе собственного)
+
+					+e.item
+						+e.item-head
+							+e.SPAN.item-count 4
+							+e.item-title.title Демонстрация результатов
+							+e.UL.item-list
+								li Упаковка результатов
+								li Способы демонстрации и «продажи» результатов
+						+e.P.item-descr Упакуем результаты своей работы в кейс и продемонстрируем его подчиненным, руководству, потенциальным работодателям или партнерам
+
+					+e.item
+						+e.item-head
+							+e.SPAN.item-count 5
+							+e.item-title.title Аттестация по итогам курса
+							+e.UL.item-list
+								li Делегирование задач и полномочий
+								li Развитие ключевых сотрудников
+						+e.P.item-descr Создадим действенную систему перераспределения 80% задач, которые сейчас выполняем самостоятельно. Избавимся от ненужной «операционки», займемся вопросами стратегического развития (в том числе собственного)
+
+					+e.item
+						+e.item-head
+							+e.SPAN.item-symbol.__item-count +
+							+e.item-title._orange.title Формируем команду (БОНУС)
+							+e.UL.item-list
+								li Наем правильных людей
+								li Адаптация
+						+e.P.item-descr Освоим эффективную методику поиска и наема талантливых сотрудников с теми ресурсами, которые есть. Научимся быстро и правильно адаптировать людей в рабочем процессе
+					+e.actions
+						+e.A.actions-btn.btn._orange(href='#!') Скачать программу
+
+				+e.examples
+					+e.examples-item
+						+e.examples-title.title Пример учебной методики
+						+e.examples-img-wrap
+							+e.IMG(src='img/content/motiv_img.jpg' alt='image')
+						+e.A.examples-link(href='#!' data-fancybox='examples') Посмотреть крупнее
+					+e.examples-item
+						+e.examples-title.title Пример мини-вебинара
+						+e.examples-img-wrap
+							+e.IMG(src='img/content/webinar_img.jpg' alt='image')
+					+e.examples-item
+						+e.examples-title.title Пример раздаточного материала
+						+e.examples-img-wrap
+							+e.IMG(src='img/content/motiv_img.jpg' alt='image')
+						+e.A.examples-link(href='#!' data-fancybox='examples') Посмотреть крупнее
+
+			+e.included(style='background-image: url(img/bg/included_bg.jpg)')
+				+e.included-container.container
+					+e.included-item
+						+e.H3.included-title.title В программу ВКЛЮЧЕНО:
+						+e.UL.included-list
+							li Живое онлайн-участие в 6 занятиях
+							li Доступ к записи всех 6 основных и еще 4 бонусных уроков на 60 дней
+							li Учебные и методические материалы (презентации, чек-листы, методики)
+							li Сертификат участника
+							li Индивидуальный куратор*
+					+e.included-item
+						+e.H4.included-sub-title.title После окончания курса вы получаете:
+						+e.UL.included-list
+							li Доступ к участию в закрытых мини-вебинарах на 3 месяца
+							li Консультационную поддержку в течении 6 месяцев
+							li Доступ к закрытой группе в Телеграм
+		//end program
+			
+		//begin authors
+		+b.SECTION.authors
+			+e.container.container
+				+e.H2.title.title Авторы курса
+
+				+e.person
+					+e.person-photo-wrap
+						+e.IMG(src='img/content/author-1.jpg' alt='image')
+					+e.person-text
+						+e.H3.person-name.title Андрей Торбичев
+						+e.P.person-descr Управляющий партнер инвестиционного фонда «Месторождение»; организатор форума «Конкуренция в медицине»; основатель сервиса «60 минут»; сооснователь сообщества «Эквиум» («Спутник») в Рыбаков Фонде.
+						+e.P.person-descr Предприниматель с 12-летним управленческим стажем: руководил как большим количеством линейных сотрудников, так и «суперзвездами».
+						+e.P.person-descr Преподаватель бизнес-школы RMA; МИРБИС
+
+				+e.person
+					+e.person-photo-wrap
+						+e.IMG(src='img/content/author-2.jpg' alt='image')
+					+e.person-text
+						+e.H3.person-name.title Виталий Акимов
+						+e.P.person-descr Управляющий партнер Бизнес-акселератора; основатель сообщества Startup Point; создатель и руководитель программы «Эквиум» («Спутник») в Рыбаков Фонде; трекер предпринимателей, суммарная капитализация компаний которых превышает 5 млрд. рублей
+		//end authors
+
+		//begin prices
+		+b.SECTION.prices(style='background-image: url(img/bg/prices_bg.jpg)')
+			+e.container.container
+				+e.H2.title.title Стоимость участия
+				+e.row.row
+					+e.card._md
+						+e.card-header
+							+e.H4.card-title.title Внедрение
+							+e.H4.card-price
+								span 39 000
+								= ' '
+								| рублей
+						+e.UL.card-list
+							li участие в живых онлайн-занятиях
+							li учебные и раздаточные материалы
+							li доступ к записи 6 онлайн-занятий на 60 дней
+							li доступ к записи 4 бонусных занятий на 60 дней
+							li участие в закрытых мини-вебинаран в течении 3 месяцев после окончания курса
+							li доступ к закрытой группе в WhatsApp
+							li Сертификат участника
+						+e.UL.card-list._orange
+							li 6-месячная поддержка после окончания курса
+							li Индивидуальные консультации Андрея Торбичева и Виталия Акимова
+						+e.card-actions
+							+e.A.card-btn.btn._orange(href='#!') Подать заявку
+							+e.card-actions-text
+								p Всего 3 места.
+								p Только после предварительного собеседования
+
+					+e.card._sm
+						+e.card-header
+							+e.H4.card-title.title Оптимальный
+							+e.H4.card-price
+								span 23 000
+								= ' '
+								| рублей
+						+e.UL.card-list
+							li участие в живых онлайн-занятиях
+							li учебные и раздаточные материалы
+							li доступ к записи 6 онлайн-занятий на 60 дней
+							li доступ к записи 4 бонусных занятий на 60 дней
+							li участие в закрытых мини-вебинаран в течении 3 месяцев после окончания курса
+							li доступ к закрытой группе в WhatsApp
+							li Сертификат участника
+						+e.card-actions
+							+e.A.card-btn.btn._orange(href='#!') купить
+
+					+e.card._sm
+						+e.card-header
+							+e.H4.card-title.title Легкий старт
+							+e.H4.card-price
+								span 7000
+								= ' '
+								| рублей
+						+e.UL.card-list
+							li участие в живых онлайн-занятиях
+							li учебные и раздаточные материалы
+						+e.card-actions
+							+e.A.card-btn.btn._orange(href='#!') купить
+
+				+e.guarantee
+					+e.H4.guarantee-title.title 100% ГАРАНТИЯ
+					+e.P Если в течении первых 7 дней вы поймете, что курс вам не подходит — вернем все деньги без вопросов
+		//end prices
+			
+		//begin testimonials
+		+b.SECTION.testimonials
+			+e.container.container
+				+e.H2.title.title._default Отзывы участников
+				+e.row.row
+					+e.item
+						+e.item-inner
+							+e.P.item-text Все понравилось, она рук. с большим стажем но есть много моментов которые вспомнила, знала но вспомнила их.
+							+e.item-person
+								+e.item-person-name Инна
+								+e.item-person-pos Генеральный директор завода, 450 сотрудников
+
+					+e.item
+						+e.item-inner
+							+e.P.item-text Запомнилась идея почетной доски и завтраки как мотивация персонала.
+							+e.item-person
+								+e.item-person-name Артем
+								+e.item-person-pos Руководитель отдела продаж, 27 сотрудников
+
+					+e.item
+						+e.item-inner
+							+e.P.item-text Новый взгляд на нематериальную мотивацию: коллектив-мотиватор, работа с неформальными лидерами.
+							+e.item-person
+								+e.item-person-name Виталий
+								+e.item-person-pos Владелец сети парикмахерских, 112 сотрудников
+
+					+e.item
+						+e.item-inner
+							+e.P.item-text Замечательная подача - увидела для себя несколько техник, которые можно использовать в повседневной работе
+							+e.item-person
+								+e.item-person-name Дамира
+								+e.item-person-pos заместитель директора по персоналу, 700 сотрудников
+
+					+e.item
+						+e.item-inner
+							+e.P.item-text Попробовал способ "1-3-1" - работает. Классно видеть изменения среди сотрудников.
+							+e.item-person
+								+e.item-person-name Марат
+								+e.item-person-pos Территорительный управляющий сети магазинов
+
+					+e.item
+						+e.item-inner
+							+e.P.item-text Есть очень полезные методики. Мне понравилось и обязательно попробую внедрить у себя.
+							+e.item-person
+								+e.item-person-name Маргарита
+								+e.item-person-pos Владелец event-агентства, 40+ сотрудников
+		//end testimonials
+
+		//begin faq
+		+b.SECTION.faq
+			+e.container.container
+				+e.H2.title.title._default Частые вопросы
+
+				+e.item
+					+e.H4.question.title 1. Что делать, если пропустил онлайн-занятие
+					+e.P.answer Ничего страшного, можно посмотреть в записи, которая будет доступна сразу после.
+
+				+e.item
+					+e.H4.question.title 2. Какие материалы вы выдаете на курсе
+		//end faq
+
+		//begin clients
+		+b.SECTION.clients(style='background-image: url(img/bg/clients_bg.jpg)')
+
+			+e.container.container
+				+e.H2.title.title._default О нас пишут и говорят
+				+e.row.row
+					-img = 0
+					while img < 4
+						+e.item
+							+e.A(href='#!')
+								+e.IMG(src=`img/content/client-${img + 1}.jpg` alt='image')
+						-img++
+				+e.row.row
+					-img = 5
+					while img < 9
+						+e.item
+							+e.A(href='#!')
+								+e.IMG(src=`img/content/client-${img}.jpg` alt='image')
+						-img++
+		//end clients

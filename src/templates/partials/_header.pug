@@ -1,0 +1,27 @@
+//BEGIN header
++b.HEADER.header(class= headerClass)
+	+e.container.container
+		+b.logo.header__logo
+			+e.IMG(src='img/other/logo.png' alt='Управленец')
+			+e.SPAN.logo-text Месторождение
+
+		+e.NAV.nav
+			-
+				navList = [
+				'Программа',
+				'Спикеры',
+				'Стоимость',
+				'Отзывы',
+				'Вопросы и ответы'
+				]
+			+e.UL.nav-list
+				-activeIndex = 0
+				for navLink, i in navList
+					li(class= i === activeIndex ? 'is-active' : ''): a(href='#!')= navLink
+
+		+e.A.tel(href='tel:+74951280814') +7 (495) 128-08-14
+
+			//+e.BUTTON.nav-btn(type='button')
+			//	+e.nav-btn-burger
+			//		+e.nav-btn-lines
+//END header
