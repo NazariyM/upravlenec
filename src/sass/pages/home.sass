@@ -6,6 +6,8 @@
    +cover
    color: #fff
    text-align: center
+   +sm
+      padding: 30px 0
    &::after
       +coverdiv
       background: rgba(#183364, .68)
@@ -18,92 +20,142 @@
       flex-direction: column
       justify-content: center
    &__event
-      margin-bottom: 30px
+      margin-bottom: 50px
+      +md
+         margin-bottom: 30px
       &-info
          line-height: 26px
+         
       &-date
+         margin-bottom: 5px
          +f('ms900', 30)
          color: $color-3
+         +sm
+            font-size: 18px
       &-time
          font-size: 20px
+         +sm
+            font-size: 18px
    &__main-text
-      margin-bottom: 30px
+      margin-bottom: 70px
+      +md
+         margin-bottom: 30px
    &__sub-title
-      margin-bottom: 5px
+      margin-bottom: 10px
       font-size: 28px
       line-height: 26px
       color: $color-3
+      +md
+         font-size: 24px
    &__title
-      margin-bottom: 5px
+      margin-bottom: 20px
       font-size: 72px
       line-height: 72px
       color: #fff
+      +md
+         font-size: 62px
+      +sm
+         font-size: 42px
+         line-height: 52px
    &__descr
       font-size: 20px
+      +sm
+         font-size: 18px
    &__actions
       &-btn
-         margin-bottom: 5px
+         margin-bottom: 10px
       &-status
          font-size: 14px
          line-height: 17px
          color: $color-4
 
 .benefits
-   padding: 50px 0
+   padding: 45px 0
    text-align: center
    &__row
+      max-width: 1200px
       justify-content: space-between
+      +md
+         flex-direction: column
+         align-items: center
    &__item
       padding: 0 15px
       line-height: 26px
+      +md
+         max-width: 600px
+      &:not(:last-child)
+         +md
+            margin-bottom: 50px
       &_md
-         flex: 0 1 410px
+         flex: 0 1 percentage(620 / 1200)
+         +md
+            flex: 0 1 auto
+            width: 100%
       &_sm
-         flex: 0 1 460px
+         flex: 0 1 percentage(470 / 1200)
+         +md
+            flex: 0 1 auto
+            width: 100%
       &-icon
          margin: 0 auto 30px
       
       &-title
          margin-bottom: 20px
          font-size: 24px
+         line-height: 26px
          color: $color-3
       &-descr
          font-size: 18px
          &:not(:last-child)
-            margin-bottom: 20px
+            margin-bottom: 30px
          strong
             +f('ms900')
             color: $black
    &__actions
-      margin-top: 40px
+      margin-top: 88px
+      +md
+         margin-top: 45px
+      +sm
+         margin-top: 30px
+      &-btn
+         +sm
+            padding: 17px 15px 15px
 
 .program
+   padding: 27px 0 0
    &__inner
-      padding: 0 30px 40px
+      padding: 0 27px 40px 38px
       background: #c3d9ee
+      +sm
+         padding: 0 10px 20px
    &__title
-      padding: 10px 0 11px
+      padding: 33px 0 31px
       text-align: center
       font-size: 30px
       line-height: 40px
       color: #000
    &__item
-      display: flex
-      align-items: flex-start
-      justify-content: space-between
-      padding: 15px 20px
-      margin: 0 -15px
+      padding: 35px 50px 50px 30px
       background: #fff
       color: #000
+      font-size: 16px
+      +md
+         padding: 35px 30px 40px 25px
+      +sm
+         padding: 35px 10px 20px 10px
+      
       &:not(:last-child)
-         margin-bottom: 30px
-      &-head
+         margin-bottom: 35px
+      &-row
+         align-items: flex-start
+         justify-content: space-between
+         +sm
+            flex-direction: column
+      &-title-wrap
          position: relative
-         flex: 0 1 480px
-         padding: 0 15px
       &-count
          position: absolute
-         top: 0
+         top: -10px
          left: 0
          width: 50px
          height: 50px
@@ -115,37 +167,57 @@
       &-symbol
          color: $color-3
          background: transparent
+         +sm
+            font-size: 40px
       &-title
-         margin-bottom: 20px
+         padding-left: 70px
+         margin-bottom: 27px
          font-size: 20px
          line-height: 25px
          color: #000
+         +sm
+            padding-left: 0
+            padding-top: 50px
          &_orange
             color: $color-3
       &-list
+         flex: 0 1 percentage(480/1085)
+         padding: 0 15px 0 85px
+         +md
+            padding: 0 15px 0 15px
+         +sm
+            flex: 0 1 auto
+            width: 100%
+            padding: 0 5px 0 15px
       &-descr
-         flex: 0 1 590px
-         align-self: flex-end
+         flex: 0 1 percentage(580/1085)
          padding: 0 15px
-         +f('ms100i', 16, 23)
+         +f('ms100i', null, 23)
+         +sm
+            flex: 0 1 auto
+            width: 100%
    
    &__actions
-      padding: 30px 0
+      margin-top: 40px
       text-align: center
       &-btn
-         padding: 17px 58px 15px
+         padding: 17px 47px 15px
    
    &__examples
-      display: flex
-      justify-content: space-between
-      padding: 50px 0
+      padding: 110px 0 5px
+      +sm
+         padding: 60px 0 5px
+      &-row
+         justify-content: space-between
+         +md
+            justify-content: center
       &-item
          flex: 0 1 370px
-         padding: 0 15px
+         padding: 0 15px 30px
          text-align: center
       &-title
          min-height: 58px
-         margin-bottom: 15px
+         margin-bottom: 25px
          font-size: 26px
          line-height: 29px
          color: #22628b
@@ -159,12 +231,16 @@
          &:hover
             border-bottom-color: transparent
    &__included
-      padding: 50px 0
+      padding: 70px 0
       color: #fff
       +cover
+      &-item
+         &:not(:last-child)
+            margin-bottom: 53px
       &-container
-         max-width: 800px
+         max-width: 680px
       &-title
+         margin-bottom: 30px
          font-size: 30px
          line-height: 37px
          color: $color-3
@@ -176,53 +252,96 @@
          line-height: 27px
 
 .authors
-   padding: 50px 0
+   padding: 90px 0 130px
+   +sm
+      padding: 60px 0
+   &__container
+      max-width: 1120px
    &__title
-      margin-bottom: 50px
+      margin-bottom: 105px
+      +md
+         margin-bottom: 50px
+      +sm
+         margin-bottom: 30px
    &__person
       display: flex
       align-items: flex-start
+      +sm
+         flex-wrap: wrap
       &:not(:last-child)
-         margin-bottom: 30px
+         margin-bottom: 94px
+         +sm
+            margin-bottom: 40px
       &-photo-wrap
-         flex: 0 1 percentage(326 / 1230)
+         flex: 0 1 percentage(326 / 1090)
          +ratio(326, 326)
          +cover-img
+         +sm
+            width: 100%
+            flex: 0 1 auto
          img
             +coverdiv
             width: 100%
       &-text
-         padding: 30px 0 0 30px
+         padding: 30px 30px 0 35px
          flex: 1
+         +md
+            padding: 0 0 0 30px
+         +sm
+            width: 100%
+            flex: 0 1 auto
+            padding: 30px 0 0
       &-name
-         margin-bottom: 15px
+         margin-bottom: 20px
          font-size: 24px
          line-height: 36px
       &-descr
+         font-size: 16px
+         line-height: 23px
          &:not(:last-child)
-            margin-bottom: 15px
+            margin-bottom: 10px
 
 .prices
-   padding: 40px 0
+   padding: 50px 0 40px
    +cover
+   &__container
+      max-width: 1234px
    &__title
+      margin-bottom: 90px
+      text-align: center
       color: #fff
       font-size: 30px
       line-height: 36px
+      +md
+         margin-bottom: 40px
+      +sm
+         margin-bottom: 30px
    &__row
+      align-items: flex-start
       justify-content: space-between
+      +md
+         justify-content: center
    &__card
-      padding: 20px 15px
+      padding: 20px 25px 40px
       background: #fff
       color: #000
+      +md
+         margin: 0 15px 30px
       &_md
          flex: 0 1 405px
+         +sm
+            flex: 1 1 100%
       &_sm
-         flex: 0 1 360px
+         flex: 0 1 350px
+         +sm
+            flex: 1 1 100%
       &-header
          position: relative
-         margin-bottom: 30px
-         padding-bottom: 20px
+         margin-bottom: 35px
+         padding-bottom: 30px
+         +sm
+            margin-bottom: 20px
+            padding-bottom: 20px
          &::after
             position: absolute
             bottom: 0
@@ -244,25 +363,36 @@
       &-list
          font-size: 15px
          line-height: 21px
+         & + &
+            margin-top: 37px
+            +sm
+               margin-top: 25px
          &_orange
             color: $color-3
+         li
+            &:not(:last-child)
+               margin-bottom: 8px
       
       &-btn
          min-width: 190px
          padding: 17px 20px 15px
       &-actions
-         margin-top: 30px
+         margin-top: 45px
          text-align: center
          &-text
-            margin-top: 10px
+            margin-top: 5px
             font-size: 14px
             line-height: 16px
    &__guarantee
-      margin: 40px 0 0 40px
+      margin: 50px 0 0 60px
       font-size: 16px
       color: #fff
+      +md
+         margin: 30px 0 0 60px
+      +sm
+         margin: 30px 0 0
       &-title
-         margin-bottom: 10px
+         margin-bottom: 3px
          font-size: 30px
          line-height: 36px
          color: $color-3
@@ -271,21 +401,40 @@
 .testimonials
    padding: 50px 0
    &__title
-      margin-bottom: 40px
+      margin-left: 70px
+      margin-bottom: 65px
+      +sm
+         margin-left: 0
+         margin-bottom: 35px
    &__item
       position: relative
       flex: 0 1 50%
       padding: 0 15px
       font-size: 16px
       line-height: 21px
+      +sm
+         flex: 1 1 100%
+      &:nth-child(1) ~ &
+         +sm
+            margin-top: 30px
       &:nth-child(2) ~ &
-         padding: 30px 15px 0
+         margin-top: 80px
+         +md
+            margin-top: 50px
+         +sm
+            margin-top: 30px
+      &:nth-child(4) ~ &
+         margin-top: 90px
+         +md
+            margin-top: 50px
       &-inner
-         padding-left: 20px
+         padding: 10px 50px 25px 25px
+         +md
+            padding: 10px 0 25px 25px
       &::before
          position: absolute
          top: 0
-         left: 0
+         left: 15px
          height: 100%
          width: 3px
          background: #343c53
@@ -303,10 +452,14 @@
          &-pos
             
 .faq
-   padding: 50px 0
+   padding: 120px 0 107px
    +cover
+   +md
+      padding: 50px 0 80px
+   +sm
+      padding: 20px 0 60px
    &__title
-      margin-bottom: 40px
+      margin-bottom: 45px
    &__item
       &:not(:last-child)
          margin-bottom: 30px
@@ -315,6 +468,7 @@
       padding-bottom: 2px
       display: inline-block
       vertical-align: top
+      margin-bottom: 4px
       font-size: 20px
       line-height: 30px
       &::after
@@ -331,22 +485,29 @@
       font-size: 16px
 
 .clients
-   padding: 50px 0
+   padding: 65px 0 95px
    +cover
    &__title
-      margin-bottom: 30px
+      margin-bottom: 60px
       color: #fff
       text-align: center
    &__row
       justify-content: space-between
+      align-items: center
+      +sm
+         flex-direction: column
       &:not(:last-child)
-         margin-bottom: 30px
+         margin-bottom: 50px
+         +sm
+            margin-bottom: 30px
    &__item
       flex: 0 0 auto
       padding: 0 15px
       text-align: center
-      a
-         display: inline-block
-         +trs
-         &:hover
-            opacity: .75
+      +md
+         flex: 0 0 25%
+      +sm
+         flex: 0 1 auto
+      &:not(:last-child)
+         +sm
+            margin-bottom: 30px

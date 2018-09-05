@@ -24,17 +24,11 @@ ul
    max-width: 1260px
    margin: 0 auto
    padding: 0 15px
-   +clr
    
 .row
    display: flex
    flex-wrap: wrap
    margin: 0 -15px
-   +md
-      justify-content: center
-      margin: 0 -10px
-   +sm
-      flex-direction: column
 
 .main
    overflow: hidden
@@ -48,13 +42,14 @@ ul
 
 .btn
    display: inline-block
-   padding: 17px 64px 15px
+   padding: 17px 47px 15px
    outline: 0
-   text-align: center
    text-transform: uppercase
    +trs
-   +f('ms700', 14, 17)
+   +f('ms700', 14, 17, 100)
    border-radius: 5px
+   +sm
+      padding: 17px 35px 15px
    &_lime
       color: $black
       background-color: $color-4
@@ -64,4 +59,4 @@ ul
       color: $white
       background-color: $color-3
       &:hover
-         background-color: #ff4c01
+         background-color: #d75303

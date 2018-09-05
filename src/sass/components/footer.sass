@@ -1,34 +1,85 @@
 .footer
-   padding: 40px 0
+   padding: 35px 0
    background: $color-2
    &__container
       display: flex
       justify-content: space-between
+      max-width: 1280px
+      +r(1023)
+         flex-direction: column
    &__info
+      flex: 0 0 220px
+      +r(1023)
+         flex: 0 1 auto
+         width: 100%
+         margin-bottom: 30px
       &-text
          margin-bottom: 20px
+         +f('ms700')
+         font-size: 16px
          color: #94a9b0
    &__nav
       display: flex
       font-size: 16px
+      flex: 0 1 880px
+      +r(1023)
+         flex: 0 1 auto
+         width: 100%
+      +sm
+         flex-direction: column
       &-col
          padding: 0 15px
+         +sm
+            padding: 0
+         &:not(:last-child)
+            +sm
+               margin-bottom: 30px
+         &:nth-of-type(1)
+            flex: 0 1 360px
+            +sm
+               flex: 0 1 auto
+               width: 100%
+         &:nth-of-type(2)
+            flex: 0 1 260px
+            +sm
+               flex: 0 1 auto
+               width: 100%
+         &:nth-of-type(3)
+            flex: 0 1 190px
+            +sm
+               flex: 0 1 auto
+               width: 100%
       &-title
-         margin-bottom: 20px
+         margin-bottom: 25px
          color: #fff
          +f('ms700')
+         +sm
+            margin-bottom: 15px
       &-list
          list-style: none
          color: #94a9b0
          li
+            &::before
+               display: none
+               content: ''
             &:not(:last-child)
                margin-bottom: 5px
 .socials
    display: flex
+   padding: 0 10px
    &__link
       
       &:not(:last-child)
-         margin-right: 15px
-         
+         margin-right: 28px
+      &:hover
+         svg
+            fill: $color-3
       svg
          fill: #9195a2
+         +trs
+      .icon-fb
+         font-size: 26px
+      .icon-tg
+         font-size: 30px
+      .icon-vk
+         font-size: 30px

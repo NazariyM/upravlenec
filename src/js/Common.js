@@ -1,6 +1,8 @@
 import objectFitImages from 'object-fit-images';
 import '@fancyapps/fancybox';
 
+import './components/MobNav';
+
 export class Common {
   constructor() {
     this.init();
